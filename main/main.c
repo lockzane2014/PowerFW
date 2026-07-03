@@ -4,10 +4,8 @@
 
 void app_main(void)
 {
-    printf("PowerFW Starting...\n");
-    
+    printf("PowerFW v0.1 - Hello World!\n");
     while (1) {
-        printf("Hello from PowerFW!\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
