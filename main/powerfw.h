@@ -3,12 +3,20 @@
 
 #include "esp_err.h"
 
-// Function declarations
+// Init all hardware
 esp_err_t powerfw_init(void);
 
-// Menu functions
+// Menu
 void menu_start(void);
 
-// Add more later...
+// Display
+esp_err_t display_init(void);
+void display_clear(void);
+void display_text(const char* text);
 
-#endif // POWERFW_H
+// CC1101
+esp_err_t cc1101_init(void);
+void cc1101_transmit(uint8_t *data, size_t len);
+void cc1101_receive(void);
+
+#endif
