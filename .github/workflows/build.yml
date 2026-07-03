@@ -16,8 +16,10 @@ jobs:
         with:
           esp_idf_version: v5.3
           target: esp32
+          path: /home/runner/esp-idf
           
       - name: Build
         run: |
+          cd $GITHUB_WORKSPACE
           . $IDF_PATH/export.sh
           idf.py build
